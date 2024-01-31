@@ -1,0 +1,12 @@
+var doc = XDocument.Load(@"G:\Gabry\a levels\computer science\NEA Password manager\test\example.xml");
+            var table = from x in doc.Descendants("sampleField")
+                        select new
+                        {
+                            Attr1 = x.Element("att1").Value,
+                            Attr2 = x.Element("att2").Value,
+                            Attr3 = x.Element("att3").Value,
+                            Attr4 = x.Element("att4").Value,
+                            Attr5 = x.Element("att5").Value,
+
+
+                        };
